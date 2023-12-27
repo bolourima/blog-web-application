@@ -4,6 +4,7 @@ import { Head } from "next/document";
 import { Header } from "@/components/Header";
 import { BlogPosts } from "@/components/BlogPosts";
 import { Hero } from "@/components/Hero";
+import { Trending } from "@/components/Trending";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,6 +18,7 @@ export default function Home() {
      
       <Header />
       <Hero />
+      <Trending/>
       <BlogPosts />
     </main>
     </>
