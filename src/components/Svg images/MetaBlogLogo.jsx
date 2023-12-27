@@ -2,7 +2,7 @@ import React from "react";
 
 export const MetaBlogLogo = () => {
   return (
-    <div>
+    <div className=" mr-[118px]">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="158"
