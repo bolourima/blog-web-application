@@ -1,3 +1,4 @@
+import { Router } from "next/router";
 import React, { useEffect } from "react";
 import { useState } from "react";
 
@@ -10,6 +11,15 @@ export const BlogPosts = () => {
       .then((data) => setArticles(data));
   }, []);
   // console.log("articles", articles);
+  function sendProps(event) {
+    Router.push({
+      pathname: "/card",
+      query: {
+        title,
+        description,
+      },
+    });
+  }
   return (
     <div className="w-[1917px] m-auto">
       <div className="w-[1216px] m-auto">
@@ -27,7 +37,7 @@ export const BlogPosts = () => {
         <div className="grid grid-cols-3 gap-5">
           {articles.map((article) => {
             return (
-              <div>
+              <a onClick={() => sendProps()} href={`/${article.id}`}>
                 <div className="border border-solid rounded-xl p-4 w-[392px]">
                   <div className="mb-4">
                     <img
@@ -66,7 +76,7 @@ export const BlogPosts = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
             );
           })}
         </div>
