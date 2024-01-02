@@ -22,37 +22,48 @@ export const Hero = () => {
       setIndex(index - 1);
     }
   }
+  function sendProps(event) {
+    Router.push({
+      pathname: "/card",
+      query: {
+        title,
+        description,
+      },
+    });
+  }
   const article = articles[index];
   return (
     <div className="mt-[100px] mb-[100px] w-[1917px] m-auto">
       <div className="flex flex-col m-auto items-center relative w-[1216px]">
         {article && (
-          <div>
-            <img
-              src={
-                article.cover_image
-                  ? article.cover_image
-                  : "https://picsum.photos/536/354"
-              }
-              alt=""
-              className="h-[600px] w-[1216px] rounded-xl"
-            />
-            <div className="absolute top-[340px] left-[10px] w-[598px] h-[252px] bg-white p-10 rounded-xl mx-30">
-              <p className="flex flex-wrap mb-4">
-                {article.tag_list.map((tag) => {
-                  return (
-                    <label className="text-sm mr-2.5 mb-1 rounded-md text-white bg-[#4B6BFB] px-2.5 py-1">
-                      {tag}
-                    </label>
-                  );
-                })}
-              </p>
-              <p className="text-4xl font-semibold mb-6 line-clamp-2">
-                {article.title}
-              </p>
-              <p>{article.readable_publish_date}</p>
+          <a onClick={() => sendProps()} href={`/${article.id}`}>
+            <div>
+              <img
+                src={
+                  article.cover_image
+                    ? article.cover_image
+                    : "https://picsum.photos/536/354"
+                }
+                alt=""
+                className="h-[600px] w-[1216px] rounded-xl"
+              />
+              <div className="absolute top-[340px] left-[10px] w-[598px] h-[252px] bg-white p-10 rounded-xl mx-30">
+                <p className="flex flex-wrap mb-4">
+                  {article.tag_list.map((tag) => {
+                    return (
+                      <label className="text-sm mr-2.5 mb-1 rounded-md text-white bg-[#4B6BFB] px-2.5 py-1">
+                        {tag}
+                      </label>
+                    );
+                  })}
+                </p>
+                <p className="text-4xl font-semibold mb-6 line-clamp-2">
+                  {article.title}
+                </p>
+                <p>{article.readable_publish_date}</p>
+              </div>
             </div>
-          </div>
+          </a>
         )}
       </div>
       <div className="text-4xl gap-4 flex justify-end  w-[1216px] m-auto mt-[11px]">
