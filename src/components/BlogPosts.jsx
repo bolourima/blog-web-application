@@ -1,8 +1,11 @@
 import { Router } from "next/router";
 import React, { useEffect } from "react";
 import { useState } from "react";
+import { useContext } from "react";
+import { SearchContextValue } from "@/Context/SearchContext";
 
 export const BlogPosts = () => {
+  const { searchValue, setSearchValue } = useContext(SearchContextValue);
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
