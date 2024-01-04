@@ -26,11 +26,11 @@ const blogID = () => {
   return (
     <div>
       <Header />
-      <p className="w-[800px] m-auto mt-[100px]">
+      <p className="lg:w-[800px] m-auto mt-6 lg:mt-[100px]">
         {filteredArticles.map((article) => {
           return (
             <div>
-              <p className="text-4xl font-semibold">{article.title}</p>
+              <p className="text-2xl lg:text-4xl font-semibold">{article.title}</p>
 
               <div className="flex items-center text-[#97989F] text-sm mt-5 mb-8">
                 <img
@@ -49,7 +49,7 @@ const blogID = () => {
                       : "https://picsum.photos/536/354"
                   }
                   alt=""
-                  className="h-[462px] w-[800px] rounded-md"
+                  className="lg:h-[462px] lg:w-[800px] rounded-md"
                 />
               </div>
               <div className="font-base flex flex-col gap-4">

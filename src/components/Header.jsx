@@ -8,7 +8,7 @@ import { Layer } from "./Svg images/Layer";
 export const Header = () => {
   const { searchValue, setSearchValue } = useContext(SearchContextValue);
   return (
-    <div className="ml-6 justify-between w-[390px] lg:w-[1917px] flex py-8 lg:px-[350px]">
+    <div className="ml-3 justify-between w-[390px] lg:w-[1917px] flex py-8 lg:px-[350px]">
       <MetaBlogLogo />
       <div className="hidden lg:w-[667px] lg:flex justify-center items-center gap-10 text-[#3B3C4A] text-base">
         <a href="/">Home</a>
@@ -27,9 +27,9 @@ export const Header = () => {
           <Search />
         </div>
       </div>
-      <div className="block lg:hidden">
+      <button className="block lg:hidden">
         <Layer />
-      </div>
+      </button>
     </div>
   );
 };

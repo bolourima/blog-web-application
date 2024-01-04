@@ -7,7 +7,7 @@ import { MetaBlogAllRightsLogo } from "./Svg images/MetaBlogAllRightsLogo";
 
 export const Footer = () => {
   return (
-    <div className="w-[410px] bg-[#E8E8EA]  lg:w-[1920px] lg:px-[352px] pt-6 lg:pt-[64px] mt-6 lg:mt-28 pb-9">
+    <div className="w-[400px] bg-[#E8E8EA]  lg:w-[1920px] lg:px-[352px] pt-6 lg:pt-[64px] mt-6 lg:mt-28 pb-9">
       <div className="lg:w-[1215px] lg:flex">
         <div className="lg:w-[280px]">
           <b className="hidden lg:text-lg lg:block">About</b>

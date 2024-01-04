@@ -63,12 +63,11 @@ export const Hero = () => {
           </a>
         )}
       </div>
-      <div className="ml-3 w-[390px] flex justify-center lg:text-4xl gap-4 lg:flex lg:justify-end  lg:w-[1216px] lg:m-auto lg:mt-[11px]">
+      <div className="ml-3 w-[390px] flex justify-center lg:text-4xl gap-4 lg:flex lg:justify-end  lg:w-[1216px] lg:m-auto mt-3 lg:mt-[11px]">
         <button
           onClick={leftClick}
-          className="h-6 w-6 lg:h-10 lg:w-10 flex justify-center items-center border-[1px] border-solid border-[#696A75] rounded-md"
+          className="h-6 w-6 lg:h-10 lg:w-10 flex justify-center items-center lg:border-[1px] border-solid border-[#696A75] rounded-md"
         >
-          {" "}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="9"
@@ -79,16 +78,15 @@ export const Hero = () => {
             <path
               d="M8.5 16L1 8.5L8.5 1"
               stroke="black"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
           </svg>
         </button>
         <button
           onClick={rightClick}
-          className="h-6 w-6 lg:h-10 lg:w-10 flex justify-center items-center border-[1px] border-solid border-[#696A75] rounded-md"
+          className="h-6 w-6 lg:h-10 lg:w-10 flex justify-center items-center lg:border-[1px] lg:border-solid lg:border-[#696A75] rounded-md"
         >
-          {" "}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="9"
@@ -99,8 +97,8 @@ export const Hero = () => {
             <path
               d="M1 1L8.5 8.5L1 16"
               stroke="black"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
           </svg>
         </button>

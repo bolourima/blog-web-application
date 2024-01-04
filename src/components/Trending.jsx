@@ -22,7 +22,7 @@ export const Trending = () => {
     <div className="flex-wrap w-[400px] lg:w-[1917px] lg:flex lg:flex-col lg:items-center lg:mb-[100px]">
       <p className="flex justify-center lg:text-2xl lg:w-[1231px] mb-[30px]">Trending</p>
       <div className="hidden lg:flex lg:w-[1917px] m-auto justify-center gap-5">
-        {articles.slice(0, 4).map((article) => {
+        {articles.slice(5, 8).map((article) => {
           return (
             <a onClick={() => sendProps()} href={`/${article.id}`}>
               <div className="relative flex h-[320px] w-[289px]">
@@ -46,7 +46,7 @@ export const Trending = () => {
         })}
       </div>
       <div className="w-[390px] lg:hidden m-auto flex justify-center gap-5">
-        {articles.slice(0,1).map((article) => {
+        {articles.slice(4,5).map((article) => {
           return (
             <a onClick={() => sendProps()} href={`/${article.id}`}>
               <div className="relative flex h-[320px] w-[289px]">
