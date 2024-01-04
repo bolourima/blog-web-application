@@ -8,15 +8,12 @@ export const Hero = () => {
       .then((response) => response.json())
       .then((data) => setArticles(data));
   }, []);
-
   const [index, setIndex] = useState(0);
-
   function rightClick() {
     if (index < articles.length - 1) {
       setIndex(index + 1);
     }
   }
-
   function leftClick() {
     if (index > 0) {
       setIndex(index - 1);
@@ -33,8 +30,8 @@ export const Hero = () => {
   }
   const article = articles[index];
   return (
-    <div className="mt-[100px] mb-[100px] w-[1917px] m-auto">
-      <div className="flex flex-col m-auto items-center relative w-[1216px]">
+    <div className="w-[390px] mb-4 lg:mt-[100px] lg:mb-[100px] lg:w-[1917px] m-auto">
+      <div className="flex flex-col m-auto items-center relative lg:w-[1216px]">
         {article && (
           <a onClick={() => sendProps()} href={`/${article.id}`}>
             <div>
@@ -45,9 +42,9 @@ export const Hero = () => {
                     : "https://picsum.photos/536/354"
                 }
                 alt=""
-                className="h-[600px] w-[1216px] rounded-xl"
+                className="ml-4 w-[380px] h-[210px] lg:h-[600px] lg:w-[1216px] rounded-xl"
               />
-              <div className="absolute top-[340px] left-[10px] w-[598px] h-[252px] bg-white p-10 rounded-xl mx-30">
+              <div className="hidden lg:absolute top-[340px] left-[10px] w-[598px] h-[252px] bg-white p-10 rounded-xl mx-30">
                 <p className="flex flex-wrap mb-4">
                   {article.tag_list.map((tag) => {
                     return (
@@ -66,10 +63,10 @@ export const Hero = () => {
           </a>
         )}
       </div>
-      <div className="text-4xl gap-4 flex justify-end  w-[1216px] m-auto mt-[11px]">
+      <div className="ml-3 w-[390px] flex justify-center lg:text-4xl gap-4 lg:flex lg:justify-end  lg:w-[1216px] lg:m-auto lg:mt-[11px]">
         <button
           onClick={leftClick}
-          className="h-10 w-10 flex justify-center items-center border-[1px] border-solid border-[#696A75] rounded-md"
+          className="h-6 w-6 lg:h-10 lg:w-10 flex justify-center items-center border-[1px] border-solid border-[#696A75] rounded-md"
         >
           {" "}
           <svg
@@ -89,7 +86,7 @@ export const Hero = () => {
         </button>
         <button
           onClick={rightClick}
-          className="h-10 w-10 flex justify-center items-center border-[1px] border-solid border-[#696A75] rounded-md"
+          className="h-6 w-6 lg:h-10 lg:w-10 flex justify-center items-center border-[1px] border-solid border-[#696A75] rounded-md"
         >
           {" "}
           <svg
