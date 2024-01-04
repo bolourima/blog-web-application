@@ -7,6 +7,11 @@ import { SearchContextValue } from "@/Context/SearchContext";
 export const BlogPosts = () => {
   const { searchValue, setSearchValue } = useContext(SearchContextValue);
   const [articles, setArticles] = useState([]);
+  // console.log("Blog search value", searchValue);
+  const searchArticles = articles.filter((article) =>
+    article.title.toLowerCase().includes(searchValue.toLowerCase())
+  );
+  // console.log("searchArticels", searchArticles);
 
   useEffect(() => {
     fetch("https://dev.to/api/articles")
@@ -14,7 +19,7 @@ export const BlogPosts = () => {
       .then((data) => setArticles(data));
   }, []);
   // console.log("articles", articles);
-  function sendProps(event) {
+  function sendProps() {
     Router.push({
       pathname: "/card",
       query: {
@@ -38,7 +43,7 @@ export const BlogPosts = () => {
       </div>
       <div className="w-[1216px] flex justify-center m-auto">
         <div className="grid grid-cols-3 gap-5">
-          {articles.map((article) => {
+          {searchArticles.map((article) => {
             return (
               <a onClick={() => sendProps()} href={`/${article.id}`}>
                 <div className="border border-solid rounded-xl p-4 w-[392px]">
@@ -82,6 +87,7 @@ export const BlogPosts = () => {
               </a>
             );
           })}
+          {searchArticles.length == 0 && <p> Article not found</p>}
         </div>
       </div>
     </div>

@@ -33,32 +33,32 @@ export default function Home() {
         <div className="flex m-auto justify-center w-[643px] bg-[#F6F6F7] py-7 rounded-xl">
           <div className="">
             <p className="font-semibold text-lg mb-7">Leave a Message</p>
-            <div className="flex gap-6 mb-5">
+            <div className="flex gap-6 mb-5 h-9">
               <input
                 type="text"
                 placeholder="Your name"
-                className="w-[225px]"
+                className="pl-3 w-[225px] rounded-[5px]"
               ></input>
               <input
                 type="text"
                 placeholder="Your Email"
-                className="w-[225px]"
+                className="pl-3 w-[229px] rounded-[5px]"
               ></input>
             </div>
             <input
               type="text"
               placeholder="Subject"
-              className="w-[478px] mb-5"
+              className="pl-3 w-[478px] mb-5 rounded-[5px] h-9"
             ></input>
             <div>
               <input
                 type="text"
                 placeholder="Write a message"
-                className="min-h-[134px] w-[478px]"
+                className="pl-3 min-h-[134px] w-[478px] rounded-[5px]"
               ></input>
             </div>
 
-            <button>Send Message</button>
+            <button className=" mt-7 w-[130px] h-10 rounded-md bg-[#4B6BFB] text-white">Send Message</button>
           </div>
         </div>
       </div>

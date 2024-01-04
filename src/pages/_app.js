@@ -2,10 +2,9 @@ import "@/styles/globals.css";
 import { SearchProvider } from "@/Context/SearchContext";
 
 export default function App({ Component, pageProps }) {
-  return;
-  <>
+  return (
     <SearchProvider>
       <Component {...pageProps} />
     </SearchProvider>
-  </>;
+  );
 }

@@ -12,13 +12,11 @@ export const Footer = () => {
         <div className="w-[280px]">
           <b className="text-lg">About</b>
           <p className="mt-3">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam
+          Empower your coding journey with our MetaBlog, designed to streamline your development process. Access a rich set of coding tools, collaborate seamlessly with fellow developers.
           </p>
           <div className="mt-6">
-            <p>Email : info@jstemplate.net</p>
-            <p>Phone : 880 123 456 789</p>
+            <p>Email : info@metablog.net</p>
+            <p>Phone : 976-2276169</p>
           </div>
         </div>
         <div className="w-[521px]  flex justify-center">
@@ -35,8 +33,9 @@ export const Footer = () => {
           <Linkedin />
         </div>
       </div>
-      <div className="flex mt-7 justify-between ">
-        <div>
+      <div className="mt-7 border-t-[1px] border-[#DCDDDF]">
+       <div className="flex  justify-between mt-7">
+         <div>
           <MetaBlogAllRightsLogo />
         </div>
         <div className="flex gap-7">
@@ -44,6 +43,8 @@ export const Footer = () => {
           <p>Privacy Policy</p>
           <p>Cookie Policy</p>
         </div>
+       </div>
+       
       </div>
     </div>
   );
