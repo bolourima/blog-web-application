@@ -30,10 +30,14 @@ export const Hero = () => {
   }
   const article = articles[index];
   return (
-    <div className="w-[390px] mb-4 lg:mt-[100px] lg:mb-[100px] lg:w-[1917px] m-auto">
-      <div className="flex flex-col m-auto items-center relative lg:w-[1216px]">
+    <div className="mb-4 lg:mt-[100px] lg:mb-[100px] lg:w-[1917px]">
+      <div className="flex flex-col m-auto items-center lg:relative lg:w-[1230px]">
         {article && (
-          <a onClick={() => sendProps()} href={`/${article.id}`}>
+          <a
+            onClick={() => sendProps()}
+            href={`/${article.id}`}
+            key={article.id}
+          >
             <div>
               <img
                 src={
@@ -42,13 +46,16 @@ export const Hero = () => {
                     : "https://picsum.photos/536/354"
                 }
                 alt=""
-                className="ml-4 w-[380px] h-[210px] lg:h-[600px] lg:w-[1216px] rounded-xl"
+                className="ml-4 w-[380px] h-[210px] lg:h-[600px] lg:w-[1230px] rounded-xl"
               />
-              <div className="hidden lg:absolute top-[340px] left-[10px] w-[598px] h-[252px] bg-white p-10 rounded-xl mx-30">
+              <div className="absolute top-[340px] left-[10px] w-[598px] h-[252px] bg-white p-10 rounded-xl mx-30">
                 <p className="flex flex-wrap mb-4">
-                  {article.tag_list.map((tag) => {
+                  {article.tag_list.map((tag, index) => {
                     return (
-                      <label className="text-sm mr-2.5 mb-1 rounded-md text-white bg-[#4B6BFB] px-2.5 py-1">
+                      <label
+                        key={index}
+                        className="text-sm mr-2.5 mb-1 rounded-md text-white bg-[#4B6BFB] px-2.5 py-1"
+                      >
                         {tag}
                       </label>
                     );

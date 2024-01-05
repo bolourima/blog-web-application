@@ -31,7 +31,9 @@ export const BlogPosts = () => {
   return (
     <div className="lg:w-[1917px] m-auto">
       <div className="lg:w-[1216px] m-auto">
-        <h2 className="flex justify-center mt-6 lg:text-4xl mb-8">All Blog Post</h2>
+        <h2 className="flex justify-center mt-6 lg:text-2xl mb-8 lg:flex lg:justify-start font-bold">
+          All Blog Post
+        </h2>
         <div className="hidden lg:flex gap-4 mb-8">
           <button>All</button>
           <button>Design</button>
@@ -45,7 +47,7 @@ export const BlogPosts = () => {
         <div className="hidden lg:block lg:grid grid-cols-3 gap-5 ">
           {searchArticles.map((article) => {
             return (
-              <a onClick={() => sendProps()} href={`/${article.id}`}>
+              <a onClick={() => sendProps()} href={`/${article.id}`} key={article.id}>
                 <div className="border border-solid rounded-xl p-4 w-[392px]">
                   <div className="mb-4">
                     <img
@@ -60,9 +62,9 @@ export const BlogPosts = () => {
                   </div>
                   <div className="h-[188px] p-2 flex justify-between flex-col">
                     <p className="flex flex-wrap">
-                      {article.tag_list.map((tag) => {
+                      {article.tag_list.map((tag, index) => {
                         return (
-                          <label className="text-sm mr-1 mb-1 rounded-md text-[#4B6BFB] bg-[#4b6bfb0d] px-2.5 py-1">
+                          <label key={index} className="text-sm mr-1 mb-1 rounded-md text-[#4B6BFB] bg-[#4b6bfb0d] px-2.5 py-1">
                             {tag}
                           </label>
                         );
@@ -92,7 +94,11 @@ export const BlogPosts = () => {
         <div className="block lg:hidden grid-cols-1 gap-5">
           {searchArticles.slice(0, 6).map((article) => {
             return (
-              <a onClick={() => sendProps()} href={`/${article.id}`}>
+              <a
+                onClick={() => sendProps()}
+                href={`/${article.id}`}
+                key={article.id}
+              >
                 <div className="border border-solid rounded-xl p-4 w-[392px]">
                   <div className="mb-4">
                     <img
@@ -107,9 +113,13 @@ export const BlogPosts = () => {
                   </div>
                   <div className="h-[188px] p-2 flex justify-between flex-col">
                     <p className="flex flex-wrap">
-                      {article.tag_list.map((tag) => {
+                      {article.tag_list.map((tag, index) => {
+                        // console.log(index)
                         return (
-                          <label className="text-sm mr-1 mb-1 rounded-md text-[#4B6BFB] bg-[#4b6bfb0d] px-2.5 py-1">
+                          <label
+                            key={index}
+                            className="text-sm mr-1 mb-1 rounded-md text-[#4B6BFB] bg-[#4b6bfb0d] px-2.5 py-1"
+                          >
                             {tag}
                           </label>
                         );
