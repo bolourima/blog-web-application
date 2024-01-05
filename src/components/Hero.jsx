@@ -48,7 +48,7 @@ export const Hero = () => {
                 alt=""
                 className="ml-4 w-[380px] h-[210px] lg:h-[600px] lg:w-[1230px] rounded-xl"
               />
-              <div className="absolute top-[340px] left-[10px] w-[598px] h-[252px] bg-white p-10 rounded-xl mx-30">
+              <div className="absolute hidden lg:block top-[340px] left-[10px] w-[598px] h-[252px] bg-white p-10 rounded-xl mx-30">
                 <p className="flex flex-wrap mb-4">
                   {article.tag_list.map((tag, index) => {
                     return (

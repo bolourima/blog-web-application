@@ -7,6 +7,9 @@ import { Layer } from "./Svg images/Layer";
 
 export const Header = () => {
   const { searchValue, setSearchValue } = useContext(SearchContextValue);
+  function menuSwitch () {
+    
+  }
   return (
     <div className="ml-3 justify-between w-[390px] lg:w-[1917px] flex py-8 lg:px-[350px]">
       <MetaBlogLogo />
@@ -30,6 +33,9 @@ export const Header = () => {
       <button className="block lg:hidden">
         <Layer />
       </button>
+      <div>
+        
+      </div>
     </div>
   );
 };
