@@ -46,7 +46,7 @@ export const Hero = () => {
                     : "https://picsum.photos/536/354"
                 }
                 alt=""
-                className="ml-4 w-[380px] h-[210px] lg:h-[600px] lg:w-[1230px] rounded-xl"
+                className="ml-[10px] w-[380px] h-[210px] lg:h-[600px] lg:w-[1230px] rounded-xl"
               />
               <div className="absolute hidden lg:block top-[340px] left-[10px] w-[598px] h-[252px] bg-white p-10 rounded-xl mx-30">
                 <p className="flex flex-wrap mb-4">
@@ -70,7 +70,7 @@ export const Hero = () => {
           </a>
         )}
       </div>
-      <div className="ml-3 w-[390px] flex justify-center lg:text-4xl gap-4 lg:flex lg:justify-end  lg:w-[1216px] lg:m-auto mt-3 lg:mt-[11px]">
+      <div className="ml-2 w-[390px] flex justify-center lg:text-4xl gap-4 lg:flex lg:justify-end  lg:w-[1216px] lg:m-auto mt-3 lg:mt-[11px]">
         <button
           onClick={leftClick}
           className="h-6 w-6 lg:h-10 lg:w-10 flex justify-center items-center lg:border-[1px] border-solid border-[#696A75] rounded-md"

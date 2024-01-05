@@ -34,7 +34,7 @@ export const Header = () => {
         <Layer />
       </button>
       <div>
-        
+
       </div>
     </div>
   );

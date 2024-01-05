@@ -26,11 +26,13 @@ const blogID = () => {
   return (
     <div>
       <Header />
-      <p className="lg:w-[800px] m-auto mt-6 lg:mt-[100px]">
+      <p className="lg:w-[800px] m-auto mt-6 lg:mt-[100px] ml-3">
         {filteredArticles.map((article) => {
           return (
             <div>
-              <p className="text-2xl lg:text-4xl font-semibold">{article.title}</p>
+              <p className="text-2xl lg:text-4xl font-semibold">
+                {article.title}
+              </p>
 
               <div className="flex items-center text-[#97989F] text-sm mt-5 mb-8">
                 <img
