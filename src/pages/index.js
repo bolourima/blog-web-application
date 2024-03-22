@@ -10,9 +10,9 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   return (
     <>
-      <head>
+      {/* <head>
         <title>Metablog</title>
-      </head>
+      </head> */}
       <main>
         <Header />
         <Hero />

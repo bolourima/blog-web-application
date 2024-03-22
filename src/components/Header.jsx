@@ -14,7 +14,7 @@ export const Header = () => {
   }
 
   return (
-    <div className="fixed mb-100px">
+    <div className="mb-100px">
       <div className="pl-3 justify-between w-[390px] lg:w-[1917px] flex py-8 lg:px-[350px] relative">
         <MetaBlogLogo />
         <div className="hidden lg:w-[667px] lg:flex justify-center items-center gap-10 text-[#3B3C4A] text-base">
